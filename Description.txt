@@ -1,0 +1,47 @@
+Our text conferencing project allows for the following commands -
+
+1. Secure Login - /login <username> <password> <server IP> <server port>
+Only clients that attempt to log in with a username and password combination that matches 
+with the one in the database will be allowed to connect to the server. Other connections 
+will be refused.
+
+2. Creating a session - /createsession <session ID>
+Every client is allowed to create a text session. They just need to provide a name for 
+the session that isn't in use already. The client will be automatically added to the
+session they created.
+						
+3. List - /list
+This command allows the client to see a list of all available sessions and the users 
+present in the session.
+
+4. Joining a session - /joinsession <session ID>
+This allows the client to join an existing session from the list of active sessions.
+
+5. Text Conferencing - <text>
+This allows the clients to communicate with each other. Any text message sent is 
+sent to all other clients present in the session.
+
+6. Leaving a session - /leavesession
+This results in the client leaving the session they were in. If the last client 
+exits the session, the session is closed.
+
+7. Logout - /logout
+This enables the client to log out of the server at any time. The client can 
+only reconnect by retyping their secure username and password.
+
+8. Quit - /quit
+This quits the program on the client's computer. The client would need to 
+establish another connection with the server and then log in if he wishes
+to join the conferencing session.
+
+Additional features supplied -
+1. Timeout
+If the client has been inactive (i.e no activity) for more than 5 minutes,
+the server forcefully removes the client from the server. If the client
+wishes to rejoin th server, they must log in again.
+
+2. Lobby
+When clients log in, they are added to a default session, called lobby.
+They can check for available sessions here, and correspondingly, join
+an existing session or create a new session.
+
